@@ -34,7 +34,6 @@ class list{
             ptr=ptr->next;
         ptr->next=newnode;
     }
-
     void find(int val){
         int count=1;
         Node* temp=head;
@@ -72,7 +71,6 @@ class list{
         }
         cout<<"NULL";
     }
-
     ~list(){
         Node* current=head;
         while(current!=NULL){
@@ -82,10 +80,7 @@ class list{
         }
         head=NULL;
     }
-
-
 };
-
  int main(){
     list mylist;
     mylist.add_end(45);
