@@ -13,6 +13,17 @@ node(int val){
 class tree{
     private :
     node *root;
+    node* searchrec(node *temp,int val){
+        if(temp==nullptr){
+            return temp;
+        }
+        if(val==temp->data)return temp;
+
+        if(val<temp->data)
+            searchrec(temp->left,val);
+        else
+            searchrec(temp->right,val);
+    }
     void insertrec(node* &croot, int val){
         if(croot==NULL){
             node *newnode = new node(val);
@@ -57,6 +68,10 @@ vector<int> inorder(node *croot, vector<int> &v){
     inorder(croot->right,v);
     return v;
 }
+node* search(int val){
+    node *temp=getroot();
+    return searchrec(temp,val);
+}
 
 };
 
@@ -77,5 +92,12 @@ int main(){
         cout<<it<<" ";
     cout<<endl;
 
+    if(t1.search(68) == nullptr)
+    {
+        cout<<"NO"<<endl;
+    }
+    else
+    cout<<t1.search(68)->data;
     return 0;
 }
+//ctrl alt N
