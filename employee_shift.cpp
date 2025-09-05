@@ -23,6 +23,7 @@ class list {
             head=newnode;
             return ;
         }
+std::cout<<"Keep Mum...Im studying";
         node *temp=head;
         while(temp->next!=nullptr)
             temp=temp->next;

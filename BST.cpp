@@ -8,7 +8,6 @@ node(int val){
     data =val;
     left=right=NULL;
 }
-
 };
 class tree{
     private :
@@ -87,6 +86,10 @@ int main(){
     t1.insert(26);
     cout<<"Tree created";
     vector<int> v;
+    else
+    cout<<"Found : "<<t1.search(68)->data;
+    return 0;
+}
     cout<<"Tree elements:"<<endl;
     for(auto it: t1.inorder(t1.getroot(), v))
         cout<<it<<" ";
@@ -96,8 +99,4 @@ int main(){
     {
         cout<<"NO"<<endl;
     }
-    else
-    cout<<t1.search(68)->data;
-    return 0;
-}
 //ctrl alt N
